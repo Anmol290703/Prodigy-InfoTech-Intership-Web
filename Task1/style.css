@@ -1,0 +1,64 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 200vh; /* Extra height for scrolling */
+}
+
+/* Navbar base */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: flex-end;
+  transition: background 0.3s, box-shadow 0.3s;
+  z-index: 1000;
+}
+
+/* Scrolled state */
+nav.scrolled {
+  background: #333;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+/* Hover effect */
+nav ul li a:hover {
+  background: white;
+  color: #333;
+}
+
+/* When scrolled, make links white */
+nav.scrolled ul li a {
+  color: white;
+}
+
+/* Content */
+.content {
+  padding: 120px 30px;
+}
